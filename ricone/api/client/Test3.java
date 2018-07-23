@@ -77,7 +77,7 @@ public class Test3 {
     }
 
     private static void testXRequestProvisioningBuilder(XPress xPress) throws MissingArgumentException, InvalidPathException {
-        XRequest request = new XRequestProvisioningBuilder(ServicePath.GET_XSTAFFS_BY_XCOURSE_REFID).id("114345B6-744B-43FE-9979-2BDC67EC273E").auppType(AUPPType.GET).build();
+        XRequest request = new XRequestProvisioningBuilder(ServicePath.GET_XSTAFFS_BY_XSCHOOL_REFID).id("114345B6-744B-43FE-9979-2BDC67EC273E").auppType(AUPPType.GET).build();
         XResponse<XStaffs> response = xPress.getXStaffs(request);
         System.out.println(response.getResponseStatus());
         for (XStaff xStaff : response.getData().getXStaff()) {
